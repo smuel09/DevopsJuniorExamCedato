@@ -1,0 +1,15 @@
+DATATABASE
+
+One of the technology terms that most people have become accustomed to hearing either at work or while surfing the Internet is the database. The database used to be an extremely technical
+term, however with the rise of computer systems and information technology throughout our culture, the database has become a household term.
+A database is a structured collection of records or data that is stored in a computer system. In order for a database to be truly functional, it must not only store large amounts of recordswell, but be accessed easily. In addition, new information and changes should also be fairly easy to input. In order to have a highly efficient database system, a program that manages the  queries and information stored on the system must be incorporated. This is usually referred to as DBMS or a Database Management System. Besides these features, all databases that are 
+created should be built with high data integrity and the ability to recover data if hardware fails.
+There are several common types of databases. Each type of database has its own data model (how the data is structured). They include Flat Model, Hierarchical Model, Relational Model, 
+and Network Model.
+Accessing Information with a Database
+While storing data is a great database feature, many database users consider quick and simple information retrieval the most important. It is extremely easy to pull up information regarding an employee in a relational database. Relational databases also add the power of running queries. Queries are requests to pull specific types of information and either show them in their natural state or create a report using the data. For instance, if someone had a database of employees that included tables such as salary and job description, he/she could easily run a query of which jobs pay over a certain amount. No matter what kind of information is stored on a database, queries can be created with SQL to help answer important questions.
+Storing a Database
+Databases can be very small (less than 1 MB) or extremely large and complicated (terabytes as in many government databases). However, all databases are usually stored and located on hard   disks or other types of storage devices and are accessed via computer. Large databases may require separate servers and locations, however many small databases can fit easily as files      located on the computer’s hard drive.
+Securing a Database
+Obviously, many databases store confidential and important information that not just anyone can easily access. Many databases require passwords and other security features in order to 
+access the information. While some databases can be accessed via the Internet through a network, other databases are closed systems and can only be accessed on site.
