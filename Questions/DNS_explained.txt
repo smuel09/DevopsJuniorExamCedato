@@ -1,0 +1,69 @@
+
+
+What is dns?
+
+Domain Name Servers (DNS) are the Internet's equivalent of a phone book. They maintain a directory of domain names and translate them to Internet Protocol (IP) addresses.
+This is necessary because, although domain names are easy for people to remember, computers or machines, access websites based on IP addresses. 
+Information from all the domain name servers across the Internet are gathered together and housed at the Central Registry. Host companies and Internet Service Providers interact with the Central Registry on a regular schedule to get updated DNS information. 
+When you type in a web address, e.g., www.oovoo.com, your Internet Service Provider views the DNS associated with the domain name, translates it into a machine friendly IP address 
+(for example 216.168.224.70 is the IP for jimsbikes.com) and directs your Internet connection to the correct website.
+
+ 
+How does it work?
+
+Namespace:
+The structure of the DNS system relies on a tree structure where the higher level domains (called TLD, for Top Level Domains) are defined, attached to a root node represented by a dot. 
+
+Domain name servers:
+The machines called domain name servers make it possible to establish the link between domain names and IP addresses of machines on a network. 
+Every domain has a domain name server, called a primary domain name server, as well as a secondary domain name server, able to take over from the primary domain name server in the event of unavailability. 
+Every domain name server is declared in the domain name server of the immediately higher level, meaning authority can implicitly be delegated over the domains. The name system is a 
+distributed architecture, where each entity is responsible for the management of its domain name. Therefore, there is no organization with responsibility for the management of all domain names. 
+The servers relating to the top level domains (TLD) are called "root name servers". There are 13 of them, distributed around the planet with the names "a.root-servers.net" to "m.root-servers.net". 
+A domain name server defines a zone, i.e. a collection of domains over which the server has authority. The domain name system is transparent for the user, nevertheless, the following points must be remembered: 
+Each computer must be configured with the address of a machine capable of transforming any name into an IP address. This machine is called the Domain Name Server. Don't panic: when you 
+connect to the Internet, the service provider will automatically change your network parameters to make these domain name servers available to you.
+The IP address of a second Domain Name Server (secondary Domain Name Server) must also be defined: the secondary domain name server can take over from the primary domain name server in the event of malfunction. 
+The most commonly used server is called BIND (Berkeley Internet Name Domain). This is free software available under UNIX systems, initially developed by the University of Berkeley in 
+California and now maintained by ISC (Internet Systems Consortium). 
+
+Domain name resolution 
+The consistent mechanism for finding the IP address relating to a host name is called "domain name resolution". The application making it possible to conduct this operation 
+(generally integrated in the operating system is called "resolving". 
+When an application wants to connect to a known host by its domain name (e.g. "www.speedtest.net"), it interrogates a domain name server defined in its network configuration. In fact, each machine connected to the network has the IP addresses of its service provider's two domain name servers in its configuration. 
+A request is then sent to the first domain name server (called the "primary domain name server"). If this domain name server has the record in its cache, it sends it to the application, if not, it interrogates a root server (in our case a server relating to the TLD ".net"). The root name server sends a list of domain name servers with authority over the domain (in this case, the IP addresses of the primary and secondary domain name servers for commentcamarche.net). 
+The primary domain name server with authority over the domain will then be interrogated and will return the corresponding record to the domain host (in our case www). 
+
+Record types:
+A DNS is a distributed database containing records known as RR (Resource Records), relating to domain names. They alone are concerned with reading the information after the people 
+responsible for the administration of a domain, the operation of domain name servers being totally transparent to users. 
+Because of the cache system enabling the DNS system to be distributed, the records for each domain have a lifetime known as TTL (Time to Live) enabling the intermediary servers to know the information's expiry date and therefore know if it is necessary to verify it or not. 
+Generally, a DNS record contains the following information: 
+
+Domain name: the domain name must be a FQDN name, i.e. must end in a dot. If the dot is missing, the domain name is relative, that is the principal domain name will suffix the entered 
+domain; 
+Type: a value out of 16 bits specifying the type of resource described by the record. The resource type may be one of the following: 
+
+A: this is a base type establishing the correspondence between the canonical name and an IP address. Moreover, there can be several A records relating to different network machines 
+(servers). 
+
+CNAME (Canonical Name): this enables an alias to be linked to the canonical name. It is particularly useful for supplying alternative names relating to different services on the same 
+machine. 
+
+HINFO: this is solely a descriptive field allowing the description in particular of the host's hardware (CPU) and operating system (OS). You are generally advised not to complete it in 
+order to avoid supplying information which can be useful to computer pirates. 
+
+MX (Mail eXchange): relates to the email server. When a user sends an email to an address (user@domain), the outgoing mail server interrogates the domain name server with authority over thedomain in order to obtain the MX record. There can be several MX records per domain, in order to supply a repetition in the event of the breakdown of the principal email server. So, the MX record allows a priority with a value between 0 and 65,535 to be defined: 
+www.commentcamarche.net.		 IN MX 10 mail.commentcamarche.net.
+
+NS: relates to the domain name server with authority over the domain. 
+
+PTR: a pointer towards another part of the domain namespace. 
+
+SOA (Start Of Authority): the SOA field allows the description of the domain name server with authority over the zone, as well as the email address of the technical contact 
+(where the "@" character is replaced by a dot). 
+Class: the class can either be IN (relating to internet protocols, so this is the system used in our case), or CH (for the chaotic system); 
+
+
+
+

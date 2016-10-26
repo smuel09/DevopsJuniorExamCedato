@@ -1,0 +1,25 @@
+GMENT
+
+What is disk defrag?
+ 
+Most hard drives have spinning platters, with data stored in different places around that platter. When your computer writes data to your drive, it does so in "blocks" that are ordered 
+sequentially from one side of the drive's platter to the other. Fragmentation happens when those files get split between blocks that are far away from each other. The hard drive then takes longer to read that file because the read head has to "visit" multiple spots on the platter. Defragmentation puts those blocks back in sequential order, so your drive head doesn't have to run around the entire platter to read a single file.
+
+When You Should (and Shouldn't) Defragment?
+
+Fragmentation doesn't cause your computer to slow down as much as it used to—at least not until it's very fragmented—but the simple answer is yes, you should still defragment your computer.However, your computer may already do it automatically. Here's what you need to know.
+If You Use a Solid-State Drive: No Defragmentation Necessary
+If you have a solid-state drive (SSD) in your computer, you do not need to defragment it. Solid-state drives, unlike regular hard drives, don't use a spinning platter to store data, and it doesn't take any extra time to read from different parts of the drive. So, defragmentation won't offer any performance increases (though SSDs do require their own maintenance).
+Of course, if you have other non-solid-state drives in your computer, those will still need defragmentation.
+Windows 7 and Windows 8 automatically defragment your hard drives for you on a schedule, so you shouldn't have to worry about it yourself. To make sure everything's running smoothly, open
+up the Start menu or Start screen and type "defrag." Open up Windows' Disk Defragmenter and make sure it's running on a schedule as intended. It should tell you when it was last run and whether your drives have any fragmentation.
+
+
+Note: A lot of you are finding that Windows 7's "automatic" defrag leaves a lot to be desired. All the more reason you should check in with Disk Defragmenter every once in a while and make sure it's doing its job! Windows 8 seems to be much better about running it regularly.
+Note that in Windows 8, you'll see your SSDs in the Disk Defragmenter, but it doesn't actually defrag them; it's just performing other SSD-related maintenance. So don't worry if it's 
+checked off along with the other drives.
+
+If You Use a Mac
+
+If you use a Mac, then you probably don't need to manually defragment, since OS X will do it automatically for you (at least for small files). However, sometimes defragging—particularly if you have a lot of very large files—can help speed up a slow Mac.
+
