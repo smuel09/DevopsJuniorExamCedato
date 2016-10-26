@@ -1,0 +1,4 @@
+ass motd {
+	 file { '/etc/motd':
+	      ownet => 'root,
+	
