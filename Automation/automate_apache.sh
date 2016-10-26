@@ -28,7 +28,7 @@ EOT
 htpasswd -c -b /etc/httpd/conf/.htpasswd username password 
 
 #Restarting HTTP service
-systemctl restart http
+systemctl restart httpd
 
 
 
